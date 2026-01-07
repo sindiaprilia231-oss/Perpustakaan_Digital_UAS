@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Peminjaman Buku</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="header"></div>
+
+<main>
+
+    <h2>📚 Form Peminjaman Buku</h2>
+
+    <form id="formTransaksi">
+
+        <input type="text" id="nim" placeholder="NIM" readonly>
+        <input type="text" id="nama" placeholder="Nama Mahasiswa" readonly>
+
+        <select id="jurusan">
+            <option value="">Pilih Jurusan</option>
+            <option>Informatika</option>
+            <option>Sistem Informasi</option>
+            <option>Manajemen</option>
+            <option>Akuntansi</option>
+        </select>
+
+        <select id="semester">
+            <option value="">Pilih Semester</option>
+            <option>1</option>
+            <option>3</option>
+            <option>5</option>
+            <option>7</option>
+        </select>
+
+        <input type="text" id="buku" placeholder="Judul Buku">
+
+        <!-- TANGGAL & JAM REALTIME -->
+        <input type="text" id="waktu" readonly>
+
+        <button type="submit">💾 Simpan Peminjaman</button>
+
+        <p id="error" class="error"></p>
+        <p id="success" class="success"></p>
+
+    </form>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Universitas Pamulang</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

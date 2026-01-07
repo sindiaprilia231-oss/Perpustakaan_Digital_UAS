@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Rekap Peminjaman</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<div id="header"></div>
+
+<main>
+
+    <h2>📊 Rekap Peminjaman Buku</h2>
+
+    <!-- DAFTAR PEMINJAM -->
+    <section class="card">
+        <h3>Daftar Peminjam</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>No Transaksi</th>
+                    <th>NIM</th>
+                    <th>Nama</th>
+                    <th>Jurusan</th>
+                    <th>Semester</th>
+                    <th>Buku</th>
+                    <th>Waktu</th>
+                </tr>
+            </thead>
+            <tbody id="tabelDaftarPeminjam"></tbody>
+        </table>
+    </section>
+
+    <!-- REKAP -->
+    <section class="card">
+        <h3>Rekap Jurusan & Semester</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Jurusan</th>
+                    <th>Semester</th>
+                    <th>Jumlah</th>
+                </tr>
+            </thead>
+            <tbody id="tabelRekap"></tbody>
+        </table>
+    </section>
+
+    <!-- GRAFIK -->
+    <section class="card">
+        <h3>Grafik Rekap</h3>
+        <canvas id="rekapChart"></canvas>
+    </section>
+
+    <!-- EXPORT -->
+    <section class="card center">
+        <button onclick="exportPDF()">📄 Export PDF</button>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Universitas Pamulang</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

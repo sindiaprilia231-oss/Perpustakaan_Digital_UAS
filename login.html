@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+<div id="header"></div>
+
+<main>
+    <h2>🔐 Login Mahasiswa</h2>
+
+    <form id="loginForm">
+        <input type="text" id="nimLogin" placeholder="NIM">
+        <input type="text" id="namaLogin" placeholder="Nama Mahasiswa">
+        <button type="submit">Login</button>
+        <p id="loginError" class="error"></p>
+    </form>
+</main>
+
+<footer>&copy; 2026 Universitas Pamulang</footer>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const nim = nimLogin.value.trim();
+    const nama = namaLogin.value.trim();
+
+    if (!nim || !nama) {
+        loginError.innerText = "⚠️ NIM dan Nama wajib diisi!";
+        return;
+    }
+
+    // SIMPAN LOGIN (KUNCI UTAMA)
+    localStorage.setItem(
+        "userLogin",
+        JSON.stringify({ nim, nama })
+    );
+
+    window.location.href = "transaksi.html";
+});
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
